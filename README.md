@@ -16,7 +16,9 @@ call sfdx force:apex:test:run --tests "BookedTradesTest,BookedTradesTriggerHandl
 
 call sfdx force:org:open
 
-Once the Browser has loaded, in the App Launcher find Booked Trades and launch it. On the app you can view existing trades or create a new one by clicking the New button. Currently the feature is limited to EUR currency due to limitations within the API
+call sfdx force:org:open -p lightning/n/Booked_Trades
+
+Once the Browser has loaded, You should see the Booked Trades app. On the app you can view existing trades or create a new one by clicking the New button. Currently the feature is limited to EUR currency due to limitations within the API
 
 Once a Trade is created the data grid will refresh and show the trade added
 
