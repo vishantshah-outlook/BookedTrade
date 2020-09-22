@@ -14,8 +14,6 @@ call sfdx force:apex:execute -f scripts/apex/QueueMemberCreation.apex
 
 call sfdx force:apex:test:run --tests "BookedTradesTest,BookedTradesTriggerHandlerTest"
 
-call sfdx force:org:open
-
 call sfdx force:org:open -p lightning/n/Booked_Trades
 
 Once the Browser has loaded, You should see the Booked Trades app. On the app you can view existing trades or create a new one by clicking the New button. Currently the feature is limited to EUR currency due to limitations within the API
