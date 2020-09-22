@@ -1,0 +1,62 @@
+<aura:component description="AddBookedTrade" controller="BookedTrades">
+
+    <aura:attribute name="sellCurrency" type="String"/>
+    <aura:attribute name="buyCurrency" type="String"/>
+    <aura:attribute name="sellRate" type="Decimal"/>
+    <aura:attribute name="sellAmount" type="Decimal"/>
+    <aura:attribute name="buyAmount" type="Decimal"/>
+
+    <aura:attribute name="currencyOptions" type="Object"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+
+    <div class="c-container" style="padding: 0px">
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+                <lightning:select aura:id="sellCurrency" name="selectItem" value="{! v.sellCurrency}"
+                                  label="Sell Currency" onchange="{!c.sellCurrencyChanged}">
+                    <option value="">Please select</option>
+                    <aura:iteration items="{! v.currencyOptions}" var="option">
+                        <option value="{! option.option}">{! option.label}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+                <lightning:input type="text" label="Rate" value="{!v.sellRate}" disabled="true"/>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+                <lightning:select aura:id="buyCurrency" name="selectItem" value="{! v.buyCurrency}"
+                                  label="Buy Currency" onchange="{!c.buyCurrencyChanged}">
+                    <option value="">Please select</option>
+                    <aura:iteration items="{! v.currencyOptions}" var="option">
+                        <option value="{! option.option}">{! option.label}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <br/>
+        <br/>
+        <lightning:layout pullToBoundary="medium">
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+                <lightning:input type="number" value="{!v.sellAmount}" label="Sell Amount" onchange="{!c.sellAmountChanged}"/>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+
+            </lightning:layoutItem>
+
+            <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-medium">
+                <lightning:input type="number" value="{!v.buyAmount}" label="Buy Amount" disabled="true"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <br/>
+        <br/>
+        <footer class="slds-modal__footer slds-modal__footer_directional" style="padding: 0px">
+            <lightning:button name="create" label="Create" disabled="{! and( !v.buyAmount, !v.sellAmount, !v.sellRate, !v.sellCurrency, !v.buyCurrency )}" onclick="{!c.handleCreate}"/>
+            <lightning:button name="cancel" label="Cancel" onclick="{!c.handleCancel}"/>
+        </footer>
+    </div>
+</aura:component>

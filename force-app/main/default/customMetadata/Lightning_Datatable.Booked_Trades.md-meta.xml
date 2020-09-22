@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Booked Trades</label>
+    <protected>false</protected>
+    <values>
+        <field>Structure__c</field>
+        <value xsi:type="xsd:string">[
+  {
+    &quot;label&quot;: &quot;Sell CCY&quot;,
+    &quot;fieldName&quot;: &quot;Sell_Currency__c&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Sell Amount&quot;,
+    &quot;fieldName&quot;: &quot;Sell_Amount__c&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;currency&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Buy CCY&quot;,
+    &quot;fieldName&quot;: &quot;Buy_Currency__c&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Buy Amount&quot;,
+    &quot;fieldName&quot;: &quot;Buy_Amount__c&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;currency&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Rate&quot;,
+    &quot;fieldName&quot;: &quot;Rate_Booked__c&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;number&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  },
+  {
+    &quot;label&quot;: &quot;Date Booked&quot;,
+    &quot;fieldName&quot;: &quot;CreatedDate&quot;,
+    &quot;sortable&quot;: true,
+    &quot;type&quot;: &quot;date&quot;,
+    &quot;cellAttributes&quot;: {
+      &quot;alignment&quot;: &quot;left&quot;
+    }
+  }
+]</value>
+    </values>
+</CustomMetadata>
