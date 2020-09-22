@@ -6,7 +6,7 @@ call git clone https://github.com/vishantshah-outlook/BookedTrade.git
 
 call sfdx force:org:create -s -f BookedTrade/config/project-scratch-def.json -a booktrade-org
 
-cd BookTrade
+cd BookedTrade
 
 call sfdx force:source:push -f
 
