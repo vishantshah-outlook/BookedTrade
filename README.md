@@ -4,12 +4,12 @@ Execute the code below to view the Lightning App Booked Trade
 
 Steps
 
-##1. Checkout from GIT
-##2. Create scratch org
-##3. Deploy to scratch org
-##4. Execute Script to create members on Trade reviewers queue
-##5. Run tests
-##6. open Booked Trades app on browser
+#1. Checkout from GIT
+#2. Create scratch org
+#3. Deploy to scratch org
+#4. Execute Script to create members on Trade reviewers queue
+#5. Run tests
+#6. open Booked Trades app on browser
 
 call git clone https://github.com/vishantshah-outlook/BookedTrade.git
 
